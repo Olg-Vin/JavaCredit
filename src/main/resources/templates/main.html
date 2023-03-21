@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th = "http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<title>Форма</title>
+	<link rel="stylesheet" th:href="@{/style1.css}">
+</head>
+<body>
+	<div class="bg"></div>
+	<div class="bg bg2"></div>
+	<div class="bg bg3"></div>
+	<div class="content">
+		<form action="/form" method="post">
+		  <div class="mt">
+			<label for="name">ФИО:</label>
+			<input type="text" class="textfield_input" id="name" name="user_name">
+		  </div>
+		  <div class="mt">
+			<label for="mail">Электронная почта:</label>
+			<input type="email" class="textfield_input" id="mail" name="user_email">
+		  </div>
+		  <div class="mt">
+			<label for="mail">Сумма кредита:</label>
+			<input type="text" class="textfield_input" id="summa" name="summa_credit">
+		  </div>
+		  <div class="mt">
+			<label for="mail">Первоначальный взнос:</label>
+			<input type="text" class="textfield_input" id="contribution" name="contribution_credit">
+		  </div>
+		  <div class="mt">
+			<label for="mail">Ежемесячный доход:</label>
+			<input type="text" class="textfield_input" id="contribution" name="contribution_credit_m">
+		  </div>
+		  <div class="list_radio mt">
+			<label for="mail">Кредитный продукт:</label>
+			 <p><input type="radio" name="type_credit" value="a1">Потребительский кредит<Br>
+				<input type="radio" name="type_credit" value="a2">Ипотека<Br>
+				<input type="radio" name="type_credit" value="a3">Автокредит<Br>
+				<input type="radio" name="type_credit" value="a4">Кредит для юр. лиц</p>
+		  </div>
+		  <div class="list_checkbox mt">
+			<label for="mail">Возможный залог:</label>
+			 <p><input type="checkbox" name="type_pledge" value="v1">Квартира<Br>
+				<input type="checkbox" name="type_pledge" value="v2">Автомобиль<Br>
+				<input type="checkbox" name="type_pledge" value="v3">Ценные бумаги<Br>
+				<input type="checkbox" name="type_pledge" value="v3">Акции<Br>
+				<input type="checkbox" name="type_pledge" value="v3">Драгоценные металлы</p>
+		  </div>
+		  <div class="mt">
+			<label for="msg">Дополнительный комментарий:</label>
+			<textarea id="msg" class="multiline_input" name="user_message"></textarea>
+		  </div>
+
+		  <div class="button mt">
+			<button class="button" style="vertical-align:middle"><span>Оставить заявку</span></button>
+		  </div>
+
+		</form>
+	</div>
+</body>

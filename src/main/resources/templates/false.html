@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th = "http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>Форма</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="content">
+  <div><p align="center" class="grey_indicate"><span th:text="${answer}"></span></p></div>
+  <!--		<div><p align="center" class="grey_indicate">Упс... Похоже сбой сервера</p></div>-->
+  <div><p align="center">К сожалению мы не можем одобрить вам кредит..</p></div>
+  <div>
+    <p align="center">Сумма вашего ежемесячного платежа составит: <span th:text="${payment}"></span> р.</p>
+    <p align="center"><span th:text="${textForSumm}"></span> <span th:text="${summa}"></span> <span th:text="${textForSumm2}"></span> <span th:text="${timeNew}"></span></p>
+    <p align="center"><span th:text="${text}"></span> <span th:text="${time}"></span> <span th:text="${month}"></span></p>
+    <p align="center">Ваша процентная ставка составляет <span th:text="${percent}"></span>% годовых</p>
+    <!--			<p align="center">Переплата по процентам за кредит: <span th:text="${pereplata}"></span> р.</p>-->
+  </div>
+  <div><p align="center"><a href="">Вернуться на сайт >></a></p></div>
+</div>
+</body>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th = "http://www.thymeleaf.org"> <!--xmlns:th = "http://www.thymeleaf.org"-->
+<head>
+	<meta charset="utf-8">
+	<title>Форма</title>
+	<link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+	<form action="/form" method="post"> <!--страничка, на которой происходит обработка формы
+	                                        принято указывать ту же страницу, на которой указана форма
+	                                        метод передачи данных post-->
+	  <div>
+		<label for="name">Имя:</label>
+		<input type="text" id="name" name="user_name">
+	  </div>
+	  <div>
+		<label for="mail">Электронная почта:</label>
+		<input type="email" id="mail" name="user_email">
+	  </div>
+	  <div>
+		<label for="mail">Сумма кредита:</label>
+		<input type="text" id="summa" name="summa_credit">
+	  </div>
+	  <div>
+		<label for="mail">Первоначальный взнос:</label>
+		<input type="text" id="contribution" name="contribution_credit">
+	  </div>
+	  <div class="list_radio">
+		<label for="mail">Кредитный продукт:</label>
+		 <p><input type="radio" name="type_credit" value="a1">Потребительский кредит<Br>
+			<input type="radio" name="type_credit" value="a2">Ипотека<Br>
+			<input type="radio" name="type_credit" value="a3">Автокредит<Br>
+			<input type="radio" name="type_credit" value="a4">Кредит для юридического лица</p>
+	  </div>
+	  <div class="list_checkbox">
+		<label for="mail">Возможный залог:</label>
+		 <p><input type="checkbox" name="type_pledge" value="v1">Квартира<Br>
+			<input type="checkbox" name="type_pledge" value="v2">Автомобиль<Br>
+			<input type="checkbox" name="type_pledge" value="v3">Иная недвижимость</p>
+	  </div>
+	  <div>
+		<label for="msg">Письмо:</label>
+		<textarea id="msg" name="user_message"></textarea> <!--тег вместо input-->
+	  </div>
+
+	  <div class="button">
+		  <!--submit - страница будет перезагружаться и данные буду отправляться на сервер-->
+		<button type="submit">Оставить заявку на одобрение кредита</button>
+	  </div>
+
+	</form>
+</body>

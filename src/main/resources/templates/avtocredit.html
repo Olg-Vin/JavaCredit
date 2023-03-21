@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Форма</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="bg"></div>
+	<div class="bg bg2"></div>
+	<div class="bg bg3"></div>
+	<div class="content">
+		<div class=ex2><h1 align="center">Заявка на автокредит со ставкой от 8% 🚗</h1></div>
+		<form action="/avtocredit" method="post">
+		  <div class="mt">
+			<label for="name">ФИО:</label>
+			<input type="text" class="textfield_input" id="name" name="user_name" placeholder="Иван Иванов Иванович">
+		  </div>
+		  <div class="mt">
+			<label for="mail">Электронная почта:</label>
+			<input type="email" class="textfield_input" id="mail" name="user_email" placeholder="ivan@mail.ru">
+		  </div>
+		  <div class="mt">
+			<label for="mail">Стоимость покупки:</label>
+			<input type="text" class="textfield_input" id="summa" name="summa_credit" placeholder="От 100.000 до 5.000.000 рублей">
+		  </div>
+		  <div class="mt">
+			<label for="mail">Срок выплаты:</label>
+			<input type="text" class="textfield_input" id="time" name="time_credit" placeholder="От 1 года и до 5 лет">
+		  </div>
+			<div class="mt">
+				<label for="mail">Количество иждивенцев:</label>
+				<input type="text" class="textfield_input" id="dependent" name="dependent_credit" placeholder="">
+			</div>
+			<div class="mt">
+				<label for="mail">Первоначальный взнос:</label>
+				<input type="text" class="textfield_input" id="contribution" name="contribution_credit" placeholder="">
+			</div>
+		  <div class="mt">
+			<label for="mail">Ежемесячный доход:</label>
+			<input type="text" class="textfield_input" id="dohod" name="dohod_credit">
+		  </div>
+		  <div class="list_checkbox mt">
+			<label for="mail">Возможный залог:</label>
+			 <p><input type="checkbox" name="type_pledge1" value="v1" disabled checked>Автомобиль<Br>
+				<input type="checkbox" name="type_pledge2" value="v2">Квартира<Br>
+				<input type="checkbox" name="type_pledge3" value="v3">Ценные бумаги<Br>
+				<input type="checkbox" name="type_pledge4" value="v4">Акции<Br>
+				<input type="checkbox" name="type_pledge5" value="v5">Драгоценные металлы</p>
+		  </div>
+		  <div class="mt">
+			<label for="msg">Дополнительный комментарий:</label>
+			<textarea id="msg" class="multiline_input" name="user_message"></textarea>
+		  </div>
+
+		  <div class="button mt">
+			<button class="button mt" style="vertical-align:middle"><span>Оставить заявку</span></button>
+		  </div>
+
+		</form>
+	</div>
+</body>

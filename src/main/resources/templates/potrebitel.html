@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th = "http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<title>Форма</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="bg"></div>
+	<div class="bg bg2"></div>
+	<div class="bg bg3"></div>
+	<div class="content">
+		<div class=ex2><h1 align="center">Заявка на потребительский кредит со ставкой от <span th:text="${percent}"></span>% 💸</h1></div>
+		<form action="/potrebitel" method="post">
+		  <div class="mt">
+			<label for="name">ФИО:</label>
+			<input type="text" class="textfield_input" id="name" name="user_name" placeholder="Иван Иванов Иванович">
+		  </div>
+		  <div class="mt">
+			<label for="mail">Электронная почта:</label>
+			<input type="email" class="textfield_input" id="mail" name="user_email" placeholder="ivan@mail.ru">
+		  </div>
+		  <div class="mt">
+			<label for="mail">Стоимость покупки:</label>
+			<input type="text" class="textfield_input" id="summa" name="summa_credit" placeholder="От 10.000 до 1.000.000 рублей">
+		  </div>
+		  <div class="mt">
+			<label for="mail">Срок выплаты:</label>
+			<input type="text" class="textfield_input" id="time" name="time_credit" placeholder="От 1 месяца до 24 месяцев">
+		  </div>
+		  <div class="mt">
+			<label for="mail">Ежемесячный доход:</label>
+			<input type="text" class="textfield_input" id="dohod" name="dohod_credit" placeholder="">
+		  </div>
+			<div class="mt">
+				<label for="mail">Количество иждивенцев:</label>
+				<input type="text" class="textfield_input" id="dependent" name="dependent_credit" placeholder="">
+			</div>
+
+		  <div class="mt">
+			<label for="msg">Дополнительный комментарий:</label>
+			<textarea id="msg" class="multiline_input" name="user_message" placeholder=""></textarea>
+		  </div>
+
+		  <div class="button mt">
+			<button class="button mt" style="vertical-align:middle"><span>Оставить заявку</span></button>
+		  </div>
+
+		</form>
+	</div>
+</body>
